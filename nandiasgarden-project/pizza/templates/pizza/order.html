@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order page</title>
+</head>
+<body>
+<h2>{{ note }}</h2>
+<h1>Order a Pizza</h1>
+<form enctype="multipart/form-data" action="{% url 'order' %}" method="post">
+    {% csrf_token %}
+    {{ pizza_form }}
+    <input type="submit" value="Order Pizza">
+</form>
+</body>
+</html>
